@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+
 int main() {
     int size;
     cout << "Enter the size of the array: ";
@@ -5,7 +8,15 @@ int main() {
 
     int* dynamicArray = new int[size];
 
-    // Code for populating the array and printing it in reverse
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value for element " << i << ": ";
+        cin >> dynamicArray[i];
+    }
+
+    cout << "Values and their memory addresses:" << endl;
+    for (int i = 0; i < size; i++) {
+        cout << "Value: " << dynamicArray[i] << ", Address: " << &dynamicArray[i] << endl;
+    }
 
     delete[] dynamicArray;
     return 0;
